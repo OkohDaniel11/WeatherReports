@@ -1,0 +1,280 @@
+/* Main stylesheet */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background:
+      /* Top-right atmospheric glow */
+    radial-gradient(
+      circle at 85% 10%,
+      rgba(104, 135, 255, 0.32) 0%,
+      rgba(104, 135, 255, 0.12) 20%,
+      transparent 45%
+    ),
+
+    /* Bottom-left blue glow */
+    radial-gradient(
+      circle at 5% 85%,
+      rgba(0, 194, 255, 0.22) 0%,
+      rgba(0, 194, 255, 0.08) 25%,
+      transparent 50%
+    ),
+
+    /* Center purple atmosphere */
+    radial-gradient(
+      circle at 55% 45%,
+      rgba(124, 92, 255, 0.15),
+      transparent 45%
+    ),
+
+    /* Main background */
+    linear-gradient(
+      135deg,
+      #050914 0%,
+      #0a1020 45%,
+      #10182d 100%
+    );
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+header .locations {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    gap: 2px;
+    top: 50px;
+    left: 10%;
+}
+
+header .locations .location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+header .locations p {
+    font-size: 25px;
+    margin: 0;
+    font-weight: 1000;
+    color: #dbdada;
+}
+
+header .locations span {
+    font-size: 16px;
+    color: #c7c5c546;
+    margin: 0;
+}
+
+header .locations i {
+    font-size: 50px;
+    color: #f0e4e4;
+    margin-left: 5px;
+}
+
+header .animatedButtons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 90%;
+    top: 30px;
+}
+
+/* Search Container with Expanding Animation */
+header .animatedButtons .search-container {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    transition: gap 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+header .animatedButtons .search-container.active {
+    gap: 10px;
+}
+
+/* Search Input - Glassmorphism Style */
+header .animatedButtons input {
+    position: absolute;
+    right: 30%;
+    padding: 12px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    color: #333;
+    width: 0;
+    opacity: 0;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease;
+    outline: none;
+}
+
+header .animatedButtons input::placeholder {
+    color: rgba(51, 51, 51, 0.6);
+}
+
+header .animatedButtons input:focus {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+}
+
+header .animatedButtons .search-container.active input {
+    width: 200px;
+    height: 30px;
+    opacity: 1;
+}
+
+/* Search Button Icon */
+header .animatedButtons #searchBtn {
+    font-size: 35px;
+    font-weight: bold;
+    color: #fdfdfde7;
+    border: solid 1.5px rgba(10, 10, 10, 0.3);
+    padding: 10px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, visibility 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+}
+
+header .animatedButtons #searchBtn:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide search button when search is active */
+header .animatedButtons .search-container.active #searchBtn {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+}
+
+/* Home Button */
+header .animatedButtons .home-btn i {
+    font-size: 35px;
+    font-weight: bold;
+    color: #fdfdfde7;
+    border: solid 1.5px rgba(10, 10, 10, 0.3);
+    padding: 10px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+header .animatedButtons .home-btn i:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.SideArticle{
+    height: 100vh;
+    width: 9%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.user-icon{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+
+.user-icon i {
+    position: relative;
+    top: 40px;
+    left: 30px;
+    font-size: 65px;
+    transition: all 0.3s ease;;
+    cursor: pointer;
+}
+
+.icons {
+    display: grid;
+    position: absolute;
+    top: 25%;
+    gap: 40px;
+}
+
+.icons i {
+    font-size: 40px;
+    color: #050505e7;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    left: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.icons i:hover,
+.update i:hover,
+.user-icon i:hover {
+    color: #ffffff;
+    transform: scale(1.4);
+}
+
+.update {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.update i {
+    font-size: 40px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+
+.update p {
+    font-size: 15px;
+    color: #00000079;
+    margin-top: 5px;
+    position: relative;
+    top: 20px;
+}

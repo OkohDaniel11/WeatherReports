@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Reports</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <header>
+                <div class="locations">
+                    <div class="location-info">
+                        <p id="cityName">Detecting Location...</p>
+                        <span id="dateTime">Loading date & time...</span>
+                    </div>
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                
+                <div class="animatedButtons">
+                    <div class="search-container">
+                        <input type="text" placeholder="Enter city name" id="cityInput">
+                        <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                    </div>
+                    <div class="home-btn">
+                        <i class="fa-regular fa-house"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <!--Side Article -->
+            <article class="SideArticle">
+                <div class="user-icon">
+                    <i class="fa-regular fa-circle-user"></i>
+                </div>
+                <div class="icons">
+                    <i class="fa-regular fa-house"></i>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <i class="fa-solid fa-signal"></i>
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+
+                <div class="update">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <p>Updated Now</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="asset/js/main.js"></script>
+</body>
+</html>
